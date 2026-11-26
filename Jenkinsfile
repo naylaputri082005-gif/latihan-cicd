@@ -12,11 +12,11 @@ pipeline {
  }
  stage('Test') {
  steps {
-  sh 'grep -qi "<footer" public/index.html'
- sh 'test -f public/index.html'
-   sh 'grep -qi "<html" public/index.html'
- sh 'grep -qi "</html>" public/index.html'
- sh 'grep -qi "<title>" public/index.html'
+  sh 'test -f public/index.html'
+  sh 'grep -qi "<html" public/index.html'
+  sh 'grep -qi "</html>" public/index.html'
+  sh 'grep -qi "<title>" public/index.html'
+  sh 'grep -qi "<footer"public/index.html'
  }
  }
  stage('Deploy') {
