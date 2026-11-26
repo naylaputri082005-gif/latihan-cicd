@@ -21,7 +21,7 @@ pipeline {
  }
  stage('Deploy') {
  steps {
-  sh 'sed -i "s/__BUILD__/$BUILD_NUMBER/" public/index.html'
+ sh 'sed -i "s/__BUILD__/$8/" public/index.html'
  sh 'cp -r public/* /var/www/html/'
  }
  }
